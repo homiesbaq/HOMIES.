@@ -4,80 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOMIES | High Streetwear</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="nav-pill">
-            <a href="index.html" class="active">Inicio</a>
-            <a href="coleccion.html">Colección</a>
-            <a href="#about">Nosotros</a>
-            <a href="#contact">Contacto</a>
-        </div>
-        <div class="nav-right">
-            <div class="search-capsule">
-                <span class="brand-logo">HOMIES</span>
+    <header class="header-container">
+        <nav class="navbar-capsule">
+            <div class="nav-links">
+                <a href="index.html" class="active">Inicio</a>
+                <a href="coleccion.html">Colección</a>
+                <a href="#about">Nosotros</a>
+                <a href="#contact">Contacto</a>
+            </div>
+            <div class="nav-brand">HOMIES</div>
+            <div class="nav-search">
                 <input type="text" placeholder="Buscar...">
             </div>
-        </div>
-    </nav>
-
-    <header class="hero-slider">
-        <div class="slides">
-            <div class="slide active">
-                <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?q=80&w=2070" alt="Nueva Colección">
-                <div class="slide-content">
-                    <h1>NUEVA <br> COLECCIÓN</h1>
-                    <p>Diseño atemporal para la cultura urbana.</p>
-                    <a href="coleccion.html" class="btn-main">EXPLORAR DROP</a>
-                </div>
-            </div>
-        </div>
-        <div class="slider-dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-        </div>
+        </nav>
     </header>
 
-    <main class="main-container">
-        <section id="about" class="about-grid">
-            <div class="about-text">
-                <span class="label">EST. 2026</span>
-                <h2>¿Cómo nacimos?</h2>
-                <p>En las calles de Barranquilla, buscábamos una identidad que uniera el lujo con lo cotidiano. HOMIES nace de esa necesidad de ser auténticos.</p>
-                <div class="stats">
-                    <div class="stat-item"><strong>100%</strong> <span>Algodón Premium</span></div>
-                    <div class="stat-item"><strong>Envío</strong> <span>Todo el país</span></div>
+    <section class="hero-section">
+        <div class="carousel-main" id="slidesWrapper">
+            <div class="slide">
+                <div class="slide-overlay">
+                    <p>NEW COLLECTION 2026</p>
+                    <h1>VERY MUCH A VIBE</h1>
+                    <a href="coleccion.html" class="btn-primary">SHOP NOW</a>
                 </div>
-            </div>
-            <div class="about-visual">
-                <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=2070" alt="Work Process">
-            </div>
-        </section>
-
-        <section class="ad-banner">
-            <div class="ad-content">
-                <h3>STREETWEAR <br> ESSENTIALS</h3>
-                <p>Nuevos estampados disponibles esta semana.</p>
-            </div>
-        </section>
-    </main>
-
-    <footer id="contact" class="footer">
-        <div class="footer-grid">
-            <div class="f-col">
-                <h3>HOMIES</h3>
-                <p>Tu comunidad, tu estilo.</p>
-            </div>
-            <div class="f-col">
-                <h4>SÍGUENOS</h4>
-                <a href="#">Instagram</a>
-                <a href="#">TikTok</a>
+                <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?q=80&w=2070" alt="Colección 1">
             </div>
         </div>
-    </footer>
+    </section>
+
+    <section class="brand-statement">
+        <div class="statement-container">
+            <span class="dot-separator">✦ ✦ ✦</span>
+            <h2>NOT A TREND, A LIFESTYLE</h2>
+            <p>Streetwear diseñado en Barranquilla para el mundo. Calidad premium en cada hilo.</p>
+        </div>
+    </section>
+
+    <section class="collection-preview container">
+        <h3 class="section-title">BEST SELLERS</h3>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="image-container">
+                    <span class="badge-new">NEW</span>
+                    <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=1887" alt="Cap">
+                </div>
+                <div class="product-details">
+                    <h4>LEGACY CAP</h4>
+                    <p>$65.000 COP</p>
+                </div>
+            </div>
+            </div>
+    </section>
 
     <script src="js/app.js"></script>
 </body>
