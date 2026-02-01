@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto | HOMIES</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-pill">
+            <a href="index.html">Inicio</a>
+            <a href="coleccion.html">Colección</a>
+            <a href="index.html#about">Nosotros</a>
+        </div>
+        <div class="search-capsule">
+            <span class="brand-logo">HOMIES</span>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <section class="product-detail-wrapper">
+            
+            <div class="product-gallery">
+                <div class="slider-container">
+                    <button class="slider-arrow prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <div class="slides-wrapper" id="slidesWrapper">
+                        <img src="https://images.unsplash.com/photo-1617192200251-4f114c00d43a?q=80&w=1920" class="slide-img" alt="Vista 1">
+                        <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1920" class="slide-img" alt="Vista 2">
+                    </div>
+                    <button class="slider-arrow next" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+            </div>
+
+            <div class="product-info-panel">
+                <p class="breadcrumb">Colección / Hombre / Hoodie</p>
+                <h1 id="prodName">Hoodie Oversize Ash</h1>
+                <p class="price" id="prodPrice">$145.000 COP</p>
+                
+                <div class="description-text">
+                    <p>Hecho con 100% algodón premium. Estampado de alta densidad y corte relajado para máxima comodidad.</p>
+                </div>
+
+                <div class="product-options">
+                    
+                    <div id="sizeSelector" class="option-group">
+                        <label>TALLA:</label>
+                        <div class="size-chips">
+                            <input type="radio" name="size" value="S" id="s" checked><label for="s">S</label>
+                            <input type="radio" name="size" value="M" id="m"><label for="m">M</label>
+                            <input type="radio" name="size" value="L" id="l"><label for="l">L</label>
+                            <input type="radio" name="size" value="XL" id="xl"><label for="xl">XL</label>
+                        </div>
+                    </div>
+
+                    <div class="option-group">
+                        <label>COLOR:</label>
+                        <select id="colorSelect" class="modern-select">
+                            <option value="Gris Ceniza">Gris Ceniza</option>
+                            <option value="Negro Mate">Negro Mate</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="btn-whatsapp" onclick="enviarPedido()">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="wa" width="20">
+                    COMPRAR AHORA POR WHATSAPP
+                </button>
+
+                <p class="shipping-info">🚚 Envío gratis a Barranquilla / Resto del país $12.000</p>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="js/product.js"></script>
+</body>
+</html>
