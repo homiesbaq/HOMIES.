@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colección | HOMIES</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-pill">
+            <a href="index.html">Inicio</a>
+            <a href="coleccion.html" class="active">Colección</a>
+            <a href="index.html#about">Nosotros</a>
+            <a href="#contact">Contacto</a>
+        </div>
+        <div class="nav-right">
+            <div class="search-capsule">
+                <span class="brand-logo">HOMIES</span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="collection-header">
+        <h1>EXPLORA EL DROP</h1>
+        <p>New Arrivals 2026 — Edición Limitada</p>
+    </header>
+
+    <section class="filters">
+        <button class="filter-btn active" onclick="filterCategory('todos')">Todos</button>
+        <button class="filter-btn" onclick="filterCategory('hombre')">Hombre</button>
+        <button class="filter-btn" onclick="filterCategory('mujer')">Mujer</button>
+        <button class="filter-btn" onclick="filterCategory('accesorios')">Accesorios</button>
+    </section>
+
+    <main class="main-container">
+        <div class="product-grid">
+            
+            <div class="product-card" data-category="hombre">
+                <a href="producto.html?id=1">
+                    <div class="product-img-container">
+                        <img src="https://images.unsplash.com/photo-1617192200251-4f114c00d43a?q=80&w=1920" alt="Hoodie Oversize">
+                        <div class="overlay-view">VER DETALLES</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Hoodie Oversize Ash</h3>
+                        <p class="category">Hombre / Nueva Colección</p>
+                        <p class="price">$145.000 COP</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="product-card" data-category="mujer">
+                <a href="producto.html?id=2">
+                    <div class="product-img-container">
+                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1920" alt="Top Urban">
+                    </div>
+                    <div class="product-info">
+                        <h3>Urban Crop Top</h3>
+                        <p class="category">Mujer / Streetwear</p>
+                        <p class="price">$85.000 COP</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="product-card" data-category="accesorios">
+                <a href="producto.html?id=3">
+                    <div class="product-img-container">
+                        <img src="https://images.unsplash.com/photo-1534215754734-18e55d13e346?q=80&w=1920" alt="Gorra Homies">
+                    </div>
+                    <div class="product-info">
+                        <h3>Gorra "Legacy" Black</h3>
+                        <p class="category">Accesorios</p>
+                        <p class="price">$60.000 COP</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="product-card" data-category="mujer">
+                <a href="producto.html?id=4">
+                    <div class="product-img-container">
+                        <img src="https://images.unsplash.com/photo-1554412933-514a83d2f3c8?q=80&w=1920" alt="Chaqueta">
+                    </div>
+                    <div class="product-info">
+                        <h3>Puffer Jacket Cream</h3>
+                        <p class="category">Mujer / Invierno</p>
+                        <p class="price">$220.000 COP</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Inspirado por la calle, diseñado para ti.</p>
+    </footer>
+
+    <script>
+        function filterCategory(cat) {
+            const products = document.querySelectorAll('.product-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            products.forEach(p => {
+                if(cat === 'todos' || p.dataset.category === cat) {
+                    p.style.display = 'block';
+                } else {
+                    p.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
