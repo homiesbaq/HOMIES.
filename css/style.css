@@ -1,160 +1,159 @@
-/* --- CONFIGURACIÓN DE COLOR Y FUENTES --- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
-
+/* VARIABLES DE MARCA */
 :root {
-    --primary: #D13916; /* Naranja pedido */
-    --secondary: #EEE42D; /* Amarillo pedido */
-    --bg: #ffffff;
-    --gray-light: #f5f5f5;
-    --text: #000000;
+    --orange: #D13916;
+    --yellow: #EEE42D;
+    --white: #ffffff;
+    --black: #000000;
+    --gray-bg: #f8f8f8;
+    --font-main: 'Inter', sans-serif;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); padding: 0 40px; }
 
-/* --- NAVBAR TIPO CÁPSULA MEJORADA --- */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+body {
+    font-family: var(--font-main);
+    background: var(--white);
+    color: var(--black);
+    line-height: 1.4;
+}
+
+/* MARGEN GLOBAL (Para que nada se vea pegado) */
+.container {
     max-width: 1400px;
-    margin: 25px auto;
+    margin: 0 auto;
+    padding: 0 40px;
 }
 
-.nav-pill {
-    background: var(--gray-light);
-    padding: 12px 40px;
-    border-radius: 100px;
+/* CARRUSEL DE ALTO IMPACTO (Inspirado en Zanerobe) */
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 90vh; /* Ocupa casi toda la pantalla */
+    overflow: hidden;
+    background: var(--gray-bg);
+}
+
+.slides-container {
     display: flex;
-    gap: 30px;
+    height: 100%;
+    transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.nav-pill a {
-    text-decoration: none;
-    color: #666;
-    font-size: 13px;
-    font-weight: 800;
+.slide {
+    min-width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Imagen siempre perfecta */
+}
+
+/* INFORMACIÓN SOBRE EL CARRUSEL */
+.slide-content {
+    position: absolute;
+    text-align: center;
+    color: var(--white);
+    z-index: 5;
+}
+
+.slide-content h1 {
+    font-size: 10vw; /* Texto gigante */
+    font-weight: 900;
+    letter-spacing: -5px;
+    line-height: 0.8;
     text-transform: uppercase;
-    transition: 0.3s;
 }
 
-.nav-pill a:hover, .nav-pill a.active { color: var(--primary); }
+/* SECCIÓN DE INFORMACIÓN (BAJO EL CARRUSEL) */
+.info-block {
+    padding: 100px 0;
+    text-align: center;
+}
 
-.brand-name { font-weight: 900; font-size: 24px; letter-spacing: -1.5px; }
+.info-block h2 {
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: var(--orange); /* Color D13916 */
+}
 
-/* --- SECCIÓN PRODUCTOS: UNIFICACIÓN TOTAL --- */
+.info-block p {
+    font-size: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+/* GRID DE PRODUCTOS (3:4 Ratio) */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    max-width: 1400px;
-    margin: 50px auto;
+    gap: 20px;
+    margin-bottom: 100px;
 }
 
-.image-holder {
-    width: 100%;
-    aspect-ratio: 3 / 4; /* El secreto del orden visual */
-    background: var(--gray-light);
+.product-card {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.img-wrapper {
+    aspect-ratio: 3 / 4; /* Proporción de revista */
+    background: var(--gray-bg);
+    margin-bottom: 15px;
     overflow: hidden;
     position: relative;
 }
 
-.image-holder img {
+.img-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.8s ease;
+    transition: transform 0.6s ease;
 }
 
 .product-card:hover img { transform: scale(1.05); }
 
-/* --- DISEÑO DE SELECTORES DE TALLA (PRODUCTO) --- */
-.option-group { margin-bottom: 30px; }
-.option-group label { 
-    display: block; 
-    font-weight: 900; 
-    font-size: 11px; 
-    letter-spacing: 1px; 
-    margin-bottom: 15px; 
+/* BADGE AMARILLO (EEE42D) */
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--yellow);
+    color: var(--black);
+    padding: 5px 12px;
+    font-weight: 900;
+    font-size: 10px;
     text-transform: uppercase;
 }
 
-.size-selector { display: flex; gap: 10px; }
-.size-selector input { display: none; }
-.size-selector label {
-    width: 45px;
-    height: 45px;
+/* SELECTORES DE PRODUCTO (Nuevos y Limpios) */
+.size-box-container {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.size-box {
+    width: 50px;
+    height: 50px;
     border: 1px solid #ddd;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     font-weight: 700;
-    font-size: 13px;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
-.size-selector input:checked + label {
-    background: var(--primary);
-    color: white;
-    border-color: var(--primary);
-}
-
-.color-select {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #ddd;
-    background: white;
-    font-weight: 700;
-    border-radius: 4px;
-    appearance: none;
-}
-
-/* --- BOTÓN WHATSAPP TOP --- */
-.btn-whatsapp {
-    background: var(--primary);
-    color: white;
-    width: 100%;
-    padding: 20px;
-    border: none;
-    font-weight: 900;
-    font-size: 14px;
-    letter-spacing: 2px;
-    cursor: pointer;
-    transition: 0.3s;
-    text-transform: uppercase;
-}
-
-.btn-whatsapp:hover {
-    background: #000;
-    transform: translateY(-2px);
-}
-
-/* --- DETALLE ESTILO "NATE ROBINSON" --- */
-.hero-banner {
-    background: var(--primary);
-    color: white;
-    padding: 100px 60px;
-    text-align: center;
-    border-radius: 8px;
-    margin-bottom: 40px;
-}
-
-.hero-banner h1 {
-    font-size: 80px;
-    font-weight: 900;
-    letter-spacing: -4px;
-    line-height: 0.8;
-}
-
-.badge-new {
-    background: var(--secondary);
-    color: black;
-    padding: 4px 10px;
-    font-size: 10px;
-    font-weight: 900;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    z-index: 5;
+.size-box:hover, .size-box.active {
+    border-color: var(--orange);
+    background: var(--orange);
+    color: var(--white);
 }
