@@ -1,159 +1,115 @@
-/* VARIABLES DE MARCA */
 :root {
     --orange: #D13916;
     --yellow: #EEE42D;
-    --white: #ffffff;
-    --black: #000000;
-    --gray-bg: #f8f8f8;
-    --font-main: 'Inter', sans-serif;
+    --light-gray: #f2f2f2;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-body {
-    font-family: var(--font-main);
-    background: var(--white);
-    color: var(--black);
-    line-height: 1.4;
+body { 
+    font-family: 'Inter', sans-serif; 
+    overflow-x: hidden; /* Evita el desborde horizontal */
+    background: #fff;
 }
 
-/* MARGEN GLOBAL (Para que nada se vea pegado) */
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 40px;
-}
-
-/* CARRUSEL DE ALTO IMPACTO (Inspirado en Zanerobe) */
-.hero-slider {
-    position: relative;
+/* NAVBAR TIPO CÁPSULA (Corregida) */
+.header-container {
     width: 100%;
-    height: 90vh; /* Ocupa casi toda la pantalla */
-    overflow: hidden;
-    background: var(--gray-bg);
+    padding: 20px 40px;
+    position: absolute; /* Para que flote sobre el carrusel */
+    z-index: 100;
 }
 
-.slides-container {
+.navbar-capsule {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
     display: flex;
-    height: 100%;
-    transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    border-radius: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #666;
+    font-size: 12px;
+    font-weight: 700;
+    margin-right: 20px;
+    text-transform: uppercase;
+}
+
+.nav-brand { font-weight: 900; font-size: 20px; letter-spacing: -1px; }
+
+/* CARRUSEL QUE SÍ FUNCIONA */
+.hero-section {
+    width: 100vw;
+    height: 90vh;
+    overflow: hidden;
 }
 
 .slide {
-    min-width: 100%;
+    width: 100vw;
+    height: 90vh;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Imagen siempre perfecta */
+    object-fit: cover; /* Esto evita que se deformen */
 }
 
-/* INFORMACIÓN SOBRE EL CARRUSEL */
-.slide-content {
+.slide-overlay {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    color: var(--white);
-    z-index: 5;
+    color: white;
+    z-index: 10;
 }
 
-.slide-content h1 {
-    font-size: 10vw; /* Texto gigante */
+.slide-overlay h1 {
+    font-size: clamp(3rem, 8vw, 7rem);
     font-weight: 900;
-    letter-spacing: -5px;
     line-height: 0.8;
-    text-transform: uppercase;
+    color: var(--yellow); /* Color EEE42D */
 }
 
-/* SECCIÓN DE INFORMACIÓN (BAJO EL CARRUSEL) */
-.info-block {
-    padding: 100px 0;
-    text-align: center;
-}
+/* CUADRÍCULA DE PRODUCTOS (Tamaño Ideal) */
+.container { max-width: 1400px; margin: 0 auto; padding: 60px 40px; }
 
-.info-block h2 {
-    font-size: 14px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    color: var(--orange); /* Color D13916 */
-}
-
-.info-block p {
-    font-size: 24px;
-    max-width: 800px;
-    margin: 0 auto;
-    font-weight: 400;
-}
-
-/* GRID DE PRODUCTOS (3:4 Ratio) */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
-    margin-bottom: 100px;
 }
 
-.product-card {
-    text-decoration: none;
-    color: var(--black);
-}
-
-.img-wrapper {
-    aspect-ratio: 3 / 4; /* Proporción de revista */
-    background: var(--gray-bg);
-    margin-bottom: 15px;
-    overflow: hidden;
+.image-container {
+    aspect-ratio: 3 / 4; /* TODAS iguales */
+    background: var(--light-gray);
     position: relative;
+    overflow: hidden;
+    margin-bottom: 15px;
 }
 
-.img-wrapper img {
+.image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.6s ease;
 }
 
-.product-card:hover img { transform: scale(1.05); }
-
-/* BADGE AMARILLO (EEE42D) */
-.badge {
+.badge-new {
     position: absolute;
-    top: 15px;
-    left: 15px;
-    background: var(--yellow);
-    color: var(--black);
-    padding: 5px 12px;
+    top: 10px;
+    left: 10px;
+    background: var(--orange); /* Color D13916 */
+    color: white;
+    padding: 5px 10px;
     font-weight: 900;
     font-size: 10px;
-    text-transform: uppercase;
-}
-
-/* SELECTORES DE PRODUCTO (Nuevos y Limpios) */
-.size-box-container {
-    display: flex;
-    gap: 10px;
-    margin: 20px 0;
-}
-
-.size-box {
-    width: 50px;
-    height: 50px;
-    border: 1px solid #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-weight: 700;
-    transition: 0.2s;
-}
-
-.size-box:hover, .size-box.active {
-    border-color: var(--orange);
-    background: var(--orange);
-    color: var(--white);
 }
