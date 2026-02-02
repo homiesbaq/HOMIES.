@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>HOMIES — Producto</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">HOMIES</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="collection.html">Collection</a>
+  </nav>
+</header>
+
+<main>
+  <section class="product-page">
+
+    <!-- IZQUIERDA: GALERÍA -->
+    <div class="product-gallery">
+      <button class="gallery-arrow left">&#10094;</button>
+
+      <!-- 👇 JS CAMBIA ESTA IMAGEN -->
+      <img id="product-image" src="" alt="Producto">
+
+      <button class="gallery-arrow right">&#10095;</button>
+    </div>
+
+    <!-- DERECHA: DETALLES -->
+    <div class="product-details">
+
+      <!-- 👇 JS CAMBIA ESTO -->
+      <h1 id="product-name"></h1>
+      <span class="price" id="product-price"></span>
+
+      <div class="options">
+        <p>Talla</p>
+        <div class="sizes">
+          <button>S</button>
+          <button>M</button>
+          <button>L</button>
+        </div>
+      </div>
+
+      <div class="options">
+        <p>Color</p>
+        <div class="colors">
+          <span class="color black"></span>
+          <span class="color white"></span>
+        </div>
+      </div>
+
+      <button class="buy-btn">Agregar al carrito</button>
+
+    </div>
+
+  </section>
+</main>
+
+<footer>
+  © HOMIES 2026
+</footer>
+
+<script src="js/products.js"></script>
+<script src="js/product.js"></script>
+
+</body>
+</html>
