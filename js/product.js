@@ -34,3 +34,28 @@ if (!product) {
     imageEl.src = product.images[currentImage];
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const buyBtn = document.getElementById("buyBtn");
+
+  if (!buyBtn) return;
+
+  buyBtn.addEventListener("click", () => {
+    const size = document.getElementById("size").value;
+    const color = document.getElementById("color").value;
+
+    if (!size || !color) {
+      alert("Por favor selecciona talla y color");
+      return;
+    }
+
+    const productName = document.querySelector("h1").innerText;
+
+    const phone = "573244529453";
+    const message = `Hola 👋, quiero comprar:\n\nProducto: ${productName}\nTalla: ${size}\nColor: ${color}`;
+
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+    window.open(url, "_blank");
+  });
+});
