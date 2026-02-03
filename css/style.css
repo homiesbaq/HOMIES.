@@ -632,3 +632,30 @@ galeria
   gap: 40px;
   padding: 80px;
 }
+
+.product-info {
+  max-width: 400px;
+}
+
+.product-info label {
+  display: block;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.product-info select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+}
+
+.buy-btn {
+  margin-top: 30px;
+  width: 100%;
+  padding: 15px;
+  background: #EEE42D;
+  border: none;
+  font-weight: 800;
+  cursor: pointer;
+}
+
