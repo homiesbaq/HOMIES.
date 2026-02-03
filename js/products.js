@@ -1,11 +1,11 @@
 const products = [
   {
-    id: "homies-tee",
-    name: "Homies Tee",
-    price: "$120.000",
+    id: "Caribe Mood",
+    name: "Caribe Mood",
+    price: "$30.000",
     description: "Camiseta gráfica inspirada en la cultura urbana.",
     images: [
-      "img/barran.jpg",
+      "img/caribemood.jpg",
       "img/h2.jpg",
       "img/h3.jpg"
     ]
