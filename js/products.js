@@ -5,7 +5,7 @@ const products = [
     price: "$30.000",
     description: "Camiseta gráfica inspirada en la cultura urbana.",
     images: [
-      "img/caribemood.jpg",
+      "img/caribe mood.jpg",
       "img/h2.jpg",
       "img/h3.jpg"
     ]
