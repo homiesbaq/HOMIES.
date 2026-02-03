@@ -34,26 +34,27 @@
       <!-- 👇 JS CAMBIA ESTO -->
       <h1 id="product-name"></h1>
       <span class="price" id="product-price"></span>
+<label>Talla</label>
+    <select id="size">
+      <option value="">Selecciona talla</option>
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
 
-      <div class="options">
-        <p>Talla</p>
-        <div class="sizes">
-          <button>S</button>
-          <button>M</button>
-          <button>L</button>
-        </div>
-      </div>
+    <!-- COLOR -->
+    <label>Color</label>
+    <select id="color">
+      <option value="">Selecciona color</option>
+      <option>Rojo</option>
+      <option>Negro</option>
+      <option>Blanco</option>
+    </select>
 
-      <div class="options">
-        <p>Color</p>
-        <div class="colors">
-          <span class="color black"></span>
-          <span class="color white"></span>
-        </div>
-      </div>
-
-      <button class="buy-btn">Agregar al carrito</button>
-
+    <button class="buy-btn" onclick="buyWhatsApp()">
+      Comprar ahora
+    </button>
     </div>
 
   </section>
