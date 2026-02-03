@@ -633,29 +633,111 @@ galeria
   padding: 80px;
 }
 
-.product-info {
-  max-width: 400px;
-}
+/* ============================= */
+/* PRODUCTO - OPCIONES DE COMPRA */
+/* ============================= */
 
-.product-info label {
-  display: block;
-  margin-top: 20px;
-  font-weight: 600;
-}
-
-.product-info select {
-  width: 100%;
-  padding: 12px;
-  margin-top: 8px;
-}
-
-.buy-btn {
+.product-buy {
+  max-width: 420px;
   margin-top: 30px;
-  width: 100%;
-  padding: 15px;
-  background: #EEE42D;
-  border: none;
-  font-weight: 800;
-  cursor: pointer;
+  padding: 25px;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
+/* Título y precio (opcional si ya existen) */
+.product-buy h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.product-buy .price {
+  font-size: 22px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 25px;
+}
+
+/* CONTENEDOR DE SELECTS */
+.product-options {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+/* CADA OPCIÓN */
+.option-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.option-group label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #555;
+}
+
+/* SELECT PERSONALIZADO */
+.option-group select {
+  appearance: none;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1.5px solid #e5e5e5;
+  background-color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover & focus */
+.option-group select:hover {
+  border-color: #000;
+}
+
+.option-group select:focus {
+  outline: none;
+  border-color: #000;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+}
+
+/* BOTÓN COMPRAR */
+.buy-btn {
+  width: 100%;
+  padding: 18px;
+  border-radius: 14px;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+/* Hover del botón */
+.buy-btn:hover {
+  background: #111;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Active */
+.buy-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .product-options {
+    flex-direction: column;
+  }
+}
