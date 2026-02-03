@@ -17,47 +17,35 @@
 
 <main>
   <section class="product-page">
-
-    <!-- IZQUIERDA: GALERÍA -->
-    <div class="product-gallery">
-      <button class="gallery-arrow left">&#10094;</button>
-
-      <!-- 👇 JS CAMBIA ESTA IMAGEN -->
-      <img id="product-image" src="" alt="Producto">
-
-      <button class="gallery-arrow right">&#10095;</button>
+  <div class="product-gallery">
+    <div class="thumbs">
+      <img src="..." />
+      <img src="..." />
     </div>
 
-    <!-- DERECHA: DETALLES -->
-    <div class="product-details">
+    <div class="main-image">
+      <span class="gallery-arrow left">‹</span>
+      <img id="product-image" />
+      <span class="gallery-arrow right">›</span>
+    </div>
+  </div>
 
-      <!-- 👇 JS CAMBIA ESTO -->
-      <h1 id="product-name"></h1>
-      <span class="price" id="product-price"></span>
-<label>Talla</label>
-    <select id="size">
-      <option value="">Selecciona talla</option>
-      <option>S</option>
-      <option>M</option>
-      <option>L</option>
-      <option>XL</option>
-    </select>
+  <div class="product-info">
+    <h1 id="product-name"></h1>
+    <p id="product-price"></p>
 
-    <!-- COLOR -->
-    <label>Color</label>
-    <select id="color">
-      <option value="">Selecciona color</option>
-      <option>Rojo</option>
-      <option>Negro</option>
-      <option>Blanco</option>
-    </select>
-
-    <button class="buy-btn" onclick="buyWhatsApp()">
-      Comprar ahora
-    </button>
+    <div class="sizes">
+      <span>XS</span><span>S</span><span>M</span><span>L</span>
     </div>
 
-  </section>
+    <div class="selectors">
+      <select id="size"></select>
+      <select id="color"></select>
+    </div>
+
+    <button id="buyBtn">Comprar por WhatsApp</button>
+  </div>
+</section>
 </main>
 
 <footer>
