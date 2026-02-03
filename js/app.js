@@ -1,17 +1,20 @@
-const MI_TELEFONO = "573244529453";
+function buyWhatsApp() {
+  const product = document.getElementById("productName").innerText;
+  const size = document.getElementById("size").value;
+  const color = document.getElementById("color").value;
 
-function enviarPedido() {
-    const nombre = document.getElementById('prodName').innerText;
-    const precio = document.getElementById('prodPrice').innerText;
-    const talla = document.querySelector('input[name="size"]:checked')?.value || "Única";
-    const color = document.getElementById('colorSelect').value;
+  if (size === "" || color === "") {
+    alert("Por favor selecciona talla y color");
+    return;
+  }
 
-    const mensaje = `*NUEVO PEDIDO HOMIES*%0A%0A` +
-                    `🔥 *Producto:* ${nombre}%0A` +
-                    `💰 *Precio:* ${precio}%0A` +
-                    `📏 *Talla:* ${talla}%0A` +
-                    `🎨 *Color:* ${color}%0A%0A` +
-                    `¿Me confirman si está disponible para envío?`;
+  const phone = "573244529453";
 
-    window.open(`https://api.whatsapp.com/send?phone=${MI_TELEFONO}&text=${mensaje}`, '_blank');
+  const message = `Hola 👋, quiero comprar:
+🧢 Producto: ${product}
+📏 Talla: ${size}
+🎨 Color: ${color}`;
+
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  window.open(url, "_blank");
 }
