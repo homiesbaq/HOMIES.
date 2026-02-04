@@ -18,7 +18,9 @@ const products = [
     description: "La tradición aquí lo es todo.",
     images: [
       "img/tra.png",
-      "img/carnaval.png"
+      "img/tra1.png",
+      "img/tra2.png",
+      "img/tra3.png"
     ]
   },
    {
