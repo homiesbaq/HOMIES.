@@ -46,5 +46,17 @@ const products = [
       "img/vib2.png",
       "img/vi33.png"
     ]
+  },
+   {
+    id: "el-calor",
+    name: "El Calor",
+    price: "$30.000",
+    description: "Con este sol o sin el aqí no se descansa.",
+    images: [
+      "img/ca.png",
+      "img/ca0.png",
+      "img/ca2.png",
+      "img/ca1.png"
+    ]
   }
 ];
