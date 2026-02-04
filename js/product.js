@@ -2,30 +2,39 @@ document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
   const productId = params.get("id");
 
-  const product = products.find(p => p.id === productId);
+  if (!productId) {
+    alert("Producto no encontrado");
+    return;
+  }
 
-  if (!product) return;
+  // 🔥 FIX CLAVE
+  const product = products.find(p => String(p.id) === productId);
 
+  if (!product) {
+    alert("Producto no disponible");
+    return;
+  }
+
+  // Info básica
   document.getElementById("product-name").textContent = product.name;
   document.getElementById("product-price").textContent = product.price;
 
+  // Galería
   const imageEl = document.getElementById("product-image");
   let currentImage = 0;
   imageEl.src = product.images[currentImage];
 
-  const leftArrow = document.querySelector(".gallery-arrow.left");
-  const rightArrow = document.querySelector(".gallery-arrow.right");
-
-  leftArrow?.addEventListener("click", () => {
+  document.querySelector(".gallery-arrow.left")?.addEventListener("click", () => {
     currentImage = (currentImage - 1 + product.images.length) % product.images.length;
     imageEl.src = product.images[currentImage];
   });
 
-  rightArrow?.addEventListener("click", () => {
+  document.querySelector(".gallery-arrow.right")?.addEventListener("click", () => {
     currentImage = (currentImage + 1) % product.images.length;
     imageEl.src = product.images[currentImage];
   });
 
+  // Comprar
   const buyBtn = document.getElementById("buyBtn");
 
   buyBtn.addEventListener("click", () => {
@@ -33,15 +42,24 @@ document.addEventListener("DOMContentLoaded", () => {
     const color = document.getElementById("color").value;
 
     if (!size || !color) {
-      alert("Selecciona talla y color");
+      alert("Selecciona talla y color antes de comprar");
       return;
     }
 
     const phone = "573244529453";
-    const message = `Hola 👋, quiero comprar:\n\nProducto: ${product.name}\nTalla: ${size}\nColor: ${color}\nPrecio: ${product.price}`;
+
+    const message = `
+Hola 👋, quiero comprar:
+
+🧢 Producto: ${product.name}
+📏 Talla: ${size}
+🎨 Color: ${color}
+💲 Precio: ${product.price}
+    `.trim();
 
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   });
 });
+
 
