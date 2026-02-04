@@ -11,8 +11,8 @@ const products = [
     ]
   },
   {
-    id: "tradicion",
-    name: "Tradición",
+    id: "la-tradicion",
+    name: "La Tradición",
     price: "$30.000",
     description: "La tradición aquí lo es todo.",
     images: [
