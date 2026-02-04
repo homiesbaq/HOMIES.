@@ -24,13 +24,15 @@ const products = [
     ]
   },
    {
-    id: "tote-black",
-    name: "ToteBags",
-    price: "$800.000",
+    id: "cule-vibra",
+    name: "Cule Vibra",
+    price: "$30.000",
     description: "Son lindas y creativas.",
     images: [
-      "img/c1.jpg",
-      "img/c2.jpg"
+      "img/vi.jpg",
+      "img/vi1.jpg",
+      "img/vi2.jpg",
+      "img/vi3.jpg"
     ]
   }
 ];
