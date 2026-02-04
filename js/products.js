@@ -16,7 +16,7 @@ const products = [
     price: "$30.000",
     description: "La tradición aquí lo es todo.",
     images: [
-      "img/carnaval.png",
+      "img/tra.png",
       "img/carnaval.png"
     ]
   },
