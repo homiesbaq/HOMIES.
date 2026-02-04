@@ -1,6 +1,6 @@
 const products = [
   {
-    id: "Caribe-Mood",
+    id: "caribe-mood",
     name: "Caribe Mood",
     price: "$30.000",
     description: "Camiseta gráfica inspirada en la cultura urbana.",
