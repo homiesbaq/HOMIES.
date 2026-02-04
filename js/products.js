@@ -11,13 +11,13 @@ const products = [
     ]
   },
   {
-    id: "street-cap",
-    name: "Street Cap",
-    price: "$90.000",
-    description: "Gorra urbana edición limitada.",
+    id: "tradicion",
+    name: "Tradición",
+    price: "$30.000",
+    description: "La tradición aquí lo es todo.",
     images: [
-      "img/barranquilla.png",
-      "img/c2.jpg"
+      "img/carnaval.png",
+      "img/carnaval.png"
     ]
   },
    {
