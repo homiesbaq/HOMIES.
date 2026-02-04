@@ -5,10 +5,10 @@ const products = [
     price: "$30.000",
     description: "Camiseta gráfica inspirada en la cultura urbana.",
     images: [
-      "img/caribe mood.png",
       "img/car1.png",
       "img/car2.png",
-      "img/car3.png"
+      "img/car3.png",
+      "img/caribe mood"
     ]
   },
   {
