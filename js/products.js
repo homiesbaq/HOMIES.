@@ -29,10 +29,22 @@ const products = [
     price: "$30.000",
     description: "Son lindas y creativas.",
     images: [
-      "img/vi.jpg",
-      "img/vi1.jpg",
-      "img/vi2.jpg",
-      "img/vi3.jpg"
+      "img/vi.png",
+      "img/vi1.png",
+      "img/vi2.png",
+      "img/vi3.png"
+    ]
+  },
+   {
+    id: "el-blush",
+    name: "Blush",
+    price: "$30.000",
+    description: "Son lindas y creativas.",
+    images: [
+      "img/vib.png",
+      "img/vib1.png",
+      "img/vib2.png",
+      "img/vi33.png"
     ]
   }
 ];
