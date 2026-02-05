@@ -94,5 +94,29 @@ const products = [
       "img/naci2.png",
       "img/naci1.png"
     ]
+  },
+   {
+    id: "sillas-cerve",
+    name: "Cervezas para las Calor",
+    price: "$30.000",
+    description: "Baja la calor con ua CERVECITA.",
+    images: [
+      "img/sillas.png",
+      "img/sillas0.png",
+      "img/sillas2.png",
+      "img/sillas1.png"
+    ]
+  },
+  {
+    id: "quilla-mi",
+    name: "QUILLAMI",
+    price: "$30.000",
+    description: "En quilla la vida es más BONITA.",
+    images: [
+      "img/quilla.png",
+      "img/quilla0.png",
+      "img/quilla2.png",
+      "img/quilla1.png"
+    ]
   }
 ];
