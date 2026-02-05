@@ -8,7 +8,8 @@ const products = [
       "img/car1.png",
       "img/car2.png",
       "img/car3.png",
-      "img/caribe mood"
+      "img/caribe mood",
+      "img/car.png"
     ]
   },
   {
@@ -30,9 +31,10 @@ const products = [
     description: "Son lindas y creativas.",
     images: [
       "img/vi.png",
+      "img/vi0.png",
       "img/vi1.png",
       "img/vi2.png",
-      "img/vi3.png"
+      "img/vi3.png",
     ]
   },
    {
@@ -42,9 +44,10 @@ const products = [
     description: "Son lindas y creativas.",
     images: [
       "img/vib.png",
+      "img/vi0.png",
       "img/vib1.png",
       "img/vib2.png",
-      "img/vi33.png"
+      "img/vib3.png"
     ]
   },
    {
@@ -56,7 +59,8 @@ const products = [
       "img/ca.png",
       "img/ca0.png",
       "img/ca2.png",
-      "img/ca1.png"
+      "img/ca1.png",
+      "img/car3.png"
     ]
   },
   {
@@ -68,7 +72,8 @@ const products = [
       "img/aq.png",
       "img/aq0.png",
       "img/aq2.png",
-      "img/aq1.png"
+      "img/aq1.png",
+      "img/car3.png"
     ]
   },
    {
@@ -80,7 +85,8 @@ const products = [
       "img/ju.png",
       "img/ju0.png",
       "img/ju2.png",
-      "img/ju1.png"
+      "img/ju1.png",
+      "img/ju3.png",
     ]
   },
    {
@@ -104,7 +110,8 @@ const products = [
       "img/sillas.png",
       "img/sillas0.png",
       "img/sillas2.png",
-      "img/sillas1.png"
+      "img/sillas1.png",
+      "img/sillas4.png"
     ]
   },
   {
@@ -116,7 +123,8 @@ const products = [
       "img/quilla.png",
       "img/quilla0.png",
       "img/quilla2.png",
-      "img/quilla1.png"
+      "img/quilla1.png",
+      "img/quilla3.png"
     ]
   }
 ];
