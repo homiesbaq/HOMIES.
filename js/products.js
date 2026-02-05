@@ -58,5 +58,41 @@ const products = [
       "img/ca2.png",
       "img/ca1.png"
     ]
+  },
+  {
+    id: "el-aqui",
+    name: "AQUÍÍÍ",
+    price: "$30.000",
+    description: "AQUÍ todo es mejor.",
+    images: [
+      "img/aq.png",
+      "img/aq0.png",
+      "img/aq2.png",
+      "img/aq1.png"
+    ]
+  },
+   {
+    id: "la-juniorista",
+    name: "La Juniorista",
+    price: "$30.000",
+    description: "JUNIOR tú papá.",
+    images: [
+      "img/ju.png",
+      "img/ju0.png",
+      "img/ju2.png",
+      "img/ju1.png"
+    ]
+  },
+   {
+    id: "donde-naci",
+    name: "Donde Nací",
+    price: "$30.000",
+    description: "Donde NACÍ es lo mejor.",
+    images: [
+      "img/naci.png",
+      "img/naci0.png",
+      "img/naci2.png",
+      "img/naci1.png"
+    ]
   }
 ];
