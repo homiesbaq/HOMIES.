@@ -6,7 +6,7 @@ const products = [
     description: "Camiseta gráfica inspirada en la cultura urbana.",
     images: [
       "img/car1.png",
-      "img/car0.png"
+      "img/car0.png",
       "img/car2.png",
       "img/car3.png",
       "img/caribe mood"
@@ -34,7 +34,7 @@ const products = [
       "img/vi0.png",
       "img/vi1.png",
       "img/vi2.png",
-      "img/vi3.png",
+      "img/vi3.png"
     ]
   },
    {
@@ -86,7 +86,7 @@ const products = [
       "img/ju0.png",
       "img/ju2.png",
       "img/ju1.png",
-      "img/ju3.png",
+      "img/ju3.png"
     ]
   },
    {
