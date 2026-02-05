@@ -797,3 +797,30 @@ galeria
     display: none;
   }
 }
+
+@media (max-width: 768px) {
+
+  .hero-carousel {
+    height: 85vh; /* evita el estiramiento raro del móvil */
+  }
+
+  .slide {
+    background-position: center top;
+  }
+
+  .slide-content {
+    bottom: 40px;
+    left: 24px;
+    right: 24px;
+    max-width: none;
+  }
+
+  .slide-content h1 {
+    font-size: 36px;
+  }
+
+  .slide-content p {
+    font-size: 14px;
+  }
+}
+
