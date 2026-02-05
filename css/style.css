@@ -140,13 +140,8 @@ footer {
 }
 
 
-/* =========================
-   HERO CAROUSEL (RESPONSIVE)
-   ========================= */
-
 .hero-carousel {
   position: relative;
-  width: 100%;
   height: 100vh;
   overflow: hidden;
 }
@@ -168,15 +163,15 @@ footer {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0,0,0,0.25);
 }
 
 .slide-content {
   position: absolute;
   bottom: 80px;
   left: 60px;
-  max-width: 520px;
-  color: #fff;
+  max-width: 500px;
+  color: white;
   z-index: 2;
 }
 
@@ -189,33 +184,6 @@ footer {
 .slide-content p {
   font-size: 16px;
   opacity: 0.9;
-}
-
-/* ===== MOBILE FIX REAL ===== */
-@media (max-width: 768px) {
-
-  .hero-carousel {
-    height: 85vh;
-  }
-
-  .slide {
-    background-position: center top;
-  }
-
-  .slide-content {
-    left: 24px;
-    right: 24px;
-    bottom: 40px;
-    max-width: none;
-  }
-
-  .slide-content h1 {
-    font-size: 34px;
-  }
-
-  .slide-content p {
-    font-size: 14px;
-  }
 }
 
 .button.light {
@@ -599,8 +567,7 @@ main {
 
 .product-gallery img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 1 / 1;
+  height: 600px;
   object-fit: cover;
 }
 
@@ -818,14 +785,15 @@ galeria
   transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
   .product-page {
     grid-template-columns: 1fr;
-    padding: 40px 20px;
+    gap: 40px;
   }
 
-  .product-gallery {
-    margin-bottom: 40px;
+  .gallery-arrow.left,
+  .gallery-arrow.right {
+    display: none;
   }
 }
-
